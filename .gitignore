@@ -61,3 +61,4 @@ VELOC*.json
 
 # Temporary file from text editor
 *~
+/.project
