@@ -25,12 +25,11 @@ def get_json(args):
         # original: 
         # direction_text = entry.get("DirectionText")
         direction_text_var = entry.get("DirectionText")
-        if direction_text_var is None:
+        if direction_text_var is None or direction_text_var=="":
                 direction_text = "empty"
         else:
                 direction_text = direction_text_var
 
-        direction_text = entry.get("DirectionText")
         line_text = entry.get("LineText")
         longitude = entry.get("Longitude")
         latitude_before = entry.get("LatitudeBefore", "")
