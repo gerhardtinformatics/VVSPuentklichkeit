@@ -20,6 +20,16 @@ def get_json(args):
 
 
         vvs_id = entry.get("ID")
+	
+	# changed direction_text detection, to set emptystring if the variable is not defined to prevent sql exception on not NULL column
+	# original: 
+	# direction_text = entry.get("DirectionText")
+	direction_text_var = entry.get("DirectionText")
+	if direction_text_var is None:
+		direction_text = ""
+	else:
+		direction_text = direction_text_var
+
         direction_text = entry.get("DirectionText")
         line_text = entry.get("LineText")
         longitude = entry.get("Longitude")
